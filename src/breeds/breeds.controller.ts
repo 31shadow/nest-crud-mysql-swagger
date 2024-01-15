@@ -23,7 +23,7 @@ import {
 @ApiUnauthorizedResponse({
   description: 'Unauthorized Bearer Auth',
 })
-@Auth(Role.ADMIN || Role.USER)
+@Auth(Role.ADMIN)
 @Controller('breeds')
 export class BreedsController {
   constructor(private readonly breedsService: BreedsService) {}
